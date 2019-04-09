@@ -14,6 +14,9 @@ Four pages - index, hover, mario, and egg
     controlled by viewport width. This is done entirely using SCSS. Mario has a custom navbar at the top.
 - Egg is where you end up if you find and click on an Easter Egg. There is one on each of the other three pages, all        obscured by CSS. Uses Bootstrap navbar, columns, Jumbotron.
 
+### Youtube tour
+https://youtu.be/hvjbRFELF9s
+
 ### Files:
 - README.md
     This
