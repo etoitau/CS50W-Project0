@@ -4,31 +4,68 @@
     <head>
         <title>Hover</title>
         <style>
-            .tile {
-            background-color: blue;
-            border: none;
-            padding: 0px;
-            margin: 0px;
-            width: 10%;
-            height: 10%;
-            transition: 0.3s;
+            body {
+                margin: 0px;
             }
-  
-            .tile:hover {
+            .container {
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                border-collapse: collapse;
+                margin: 0px;
+            }
+            td {
                 background-color: white;
+                border: none;
+                padding: 0px;
+                margin: 0px;
+                width: 10%;
+                height: 10%;
+                transition-duration: 5s;
+                text-align: center;
             }
 
-            h2 {
+            td:hover {
+                background-color: blue;
+                transition-duration: 0.2s;
+            }
+
+            td > a {
+                color: white;
+                text-decoration: none;
+            }
+            .egg a {
+                color: white;
+                font-size: 16px;
+                text-decoration: none;
+                transition-duration: 5s;
+                cursor: default;
+            }
+
+            .egg:hover a {
+                transition-duration: 0.2s;
                 color: blue;
             }
+  
+            
+
+            
+
         </style>
     </head>
     <body>
-        <h2>Hover Field</h2>
-        <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
-        <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
-        <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
-        <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
-        <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+            <table class="container">
+                <tr><td><a href="index.html">Index</a></td><td><a href="#">Hover</a></td><td><a href="Mario.html">Mario</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="egg"><a href="egg.html">&bull;</a></td><td></td><td></td></tr>
+                
+            </table>
     </body>
 </html>

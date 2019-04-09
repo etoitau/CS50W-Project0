@@ -1,9 +1,83 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Webpage</title>
+        <title>Project 0: Homepage</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .egg, .egg:hover {
+                color: white;
+                text-decoration: none;
+                cursor: default;
+            }
+            
+            .egg::selection {
+                display: none;
+            }
+
+            ol ul {
+                list-style: none;
+            }
+
+            ol ul li:before {
+                content: "✓ ";
+            }
+        </style>
     </head>
     <body>
-        Hello, world!
+        
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link active" href="#">Index</a></li>
+            <li class="nav-item"><a class="nav-link" href="hover.html">Hover</a></li>
+            <li class="nav-item"><a class="nav-link" href="mario.html">Mario</a></li>
+        </ul>
+        
+        <div class="container">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-11">
+                <h2>Project 0: Homepage</h2>
+                By Kyle Chatman
+                <p>Exercise with: HTML, CSS, and SCSS</p>
+                Pages:
+                <ol>
+                    <li>Index - This page</li>
+                        <ul>
+                            <li>Links to other three pages</li>
+                            <li>Lists</li>
+                            <li>Bootstrap columns</li>
+                            <li>Bootstrap component - Pills (navbar)</li>
+                            <li>CSS properties</li>
+                            <li>CSS selectors - class, pseudo-class, pseudo-element</li>
+                        </ul>
+                    <li>Hover - Pretty when you mouse over</li>
+                        <ul>
+                            <li>Links to other three pages</li>
+                            <li>Uses a table</li>
+                            <li>CSS properties</li>
+                            <li>CSS selectors - type, class, decendant, child, pseudo-class</li>
+                        </ul>
+                    <li>Mario - Recreates first CS50 assignment again</li>    
+                        <ul>
+                            <li>Links to other three pages</li>
+                            <li>Image</li>
+                            <li>Stylesheet file</li>
+                            <li>Many CSS properties</li>
+                            <li>CSS selectors: type, class, id, decendant, pseudo-element</li>
+                            <li>Media querys</li>
+                            <li>SCSS variables</li>
+                            <li>SCSS nesting</li>
+                            <li>SCSS inheritance</li>
+                        </ul>
+                    <li>Easter Egg - Each page has a link to this somewhere<a class="egg" href="egg.html">&bull;</a></li>
+                        <ul>
+                            <li>Links to other three pages</li>
+                            <li>Bootstrap columns</li>
+                            <li>Bootstrap component - Pills (navbar), jumbotron</li>
+                            <li>CSS properties</li>
+                            <li>CSS selectors - class, pseudo-class, pseudo-element</li>
+                        </ul>
+
+                </ol>
+            </div>
+        </div>
     </body>
 </html>

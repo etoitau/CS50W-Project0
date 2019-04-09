@@ -1,0 +1,135 @@
+$blockurl: "stepblock.png";
+$blankurl: "blank.png";
+$maxtier: 5;
+$bdim: 50;
+$i: 1;
+$j: 1;
+$bmargin: 10px;
+
+.mariofont, p {
+    Color: #292929;
+    font-family: "Courier New", "Courier", monospace;
+    font-size: 10px;
+} 
+
+#navi {
+    @extend .mariofont;
+    background-color: #e75a10;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    margin: 0px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+#navi a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    margin: 0px;
+}
+
+h2 {
+    @extend .mariofont;
+    font-size: 16px;
+}
+
+.title {
+    margin: $bmargin;
+}
+
+.stairs {
+    line-height: 100%;
+    margin: $bmargin;
+}
+
+img {
+    height: $bdim * 1px;
+    vertical-align: top;
+}
+
+.egg {
+    color: white;
+    text-decoration: none;
+    cursor: default;
+}
+
+.egg::selection {
+    display: none;
+}
+
+@for $level from 1 through $maxtier {
+    @for $block from 0 through ($maxtier - $level) {
+        @if $block > 0 {
+                img {
+                    &:nth-child(#{$i}) {
+                        content: url(#{$blankurl});
+                    }
+                }
+                @media (max-width: ($bdim * 2 * ($level + 1)) * 1px + 2 * $bmargin) {
+                    img {
+                        &:nth-child(#{$i}) {
+                            width: 0px;
+                        }
+                    }
+                }  
+                @media (max-width: ($bdim * (14 - $block * 2)) * 1px + 2 * $bmargin) {
+                    img {
+                        &:nth-child(#{$i}) {
+                            width: 0px;
+                        }
+                    }
+                }  
+            $i: $i+1;
+        }
+    }
+    @for $block from 1 through $level {
+        img {
+            &:nth-child(#{$i}) {
+                content: url(#{$blockurl});
+            }
+        }
+        @media (max-width: ($bdim * 2 * ($level + 1)) * 1px + 2 * $bmargin) {
+            img {
+                &:nth-child(#{$i}) {
+                    width: 0px;
+                }
+            }
+        }
+        $i: $i+1;
+    }
+    @for $block from 1 through 2 {
+        img {
+            &:nth-child(#{$i}) {
+                content: url(#{$blankurl});
+            }
+        }
+        @media (max-width: ($bdim * 2 * ($level + 1)) * 1px + 2 * $bmargin) {
+            img {
+                &:nth-child(#{$i}) {
+                    width: 0px;
+                }
+            }
+        }
+        $i: $i+1;
+    }
+    @for $block from 1 through $level {
+        img {
+            &:nth-child(#{$i}) {
+                content: url(#{$blockurl});
+            }
+        }
+        @media (max-width: ($bdim * 2 * ($level + 1)) * 1px + 2 * $bmargin) {
+            img {
+                &:nth-child(#{$i}) {
+                    width: 0px;
+                }
+            }
+        }
+        $i: $i+1;
+    }
+    $i: $i+1; //for the br
+}
